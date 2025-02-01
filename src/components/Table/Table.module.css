@@ -69,11 +69,6 @@
 }
 
 .shortLink {
-    width: 200px;
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     position: relative;
 }
 

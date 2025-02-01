@@ -14,9 +14,13 @@ export const formatDate = (isoString) => {
 
 
 export const formatStatus = (expiry) => {
+    if (!expiry) {
+        return "Active";
+    }
     const currentDate = new Date();
+    const expiryDate = new Date(expiry);
 
-    if (expiry < currentDate) {
+    if (expiryDate < currentDate) {
         return "Not Active";
     } else {
         return "Active";

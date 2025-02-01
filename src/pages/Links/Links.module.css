@@ -20,7 +20,6 @@
 .shortLinkContainer {
     display: flex;
     align-items: center;
-    max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -30,7 +29,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 200px;
 }
 
 .copyIcon {
