@@ -1,0 +1,69 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.yesButton, .noButton {
+    padding: 0.5rem 5rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.yesButton {
+    background-color: #1B48DA;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 95vw;
+        padding: 1.5rem;
+    }
+
+    .buttons {
+        gap: 0.8rem;
+        display: block;
+    }
+
+    .yesButton, .noButton {
+        width: 100%;
+
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+}

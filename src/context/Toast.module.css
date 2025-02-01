@@ -1,0 +1,38 @@
+.toast {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    z-index: 1000;
+    animation: fadeInOut 3s;
+}
+
+.success {
+    background-color: #28a745;
+}
+
+.error {
+    background-color: #dc3545;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+}

@@ -1,0 +1,162 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+    margin: 1rem 1rem;
+}
+
+.rightContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.createButton {
+    background-color: #1B48DA;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+p :first-child {
+    font-weight: bold;
+}
+
+h4 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.profileIcon {
+    background-color: #FDE48A;
+    color: #923E0E;
+    padding: 1rem;
+    border-radius: 3rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    right: 2%;
+    top: 12%;
+    z-index: 5;
+}
+
+.dropdown button {
+    background-color: white;
+    border: 1px solid #ECECF2;
+    padding: 0.5rem 4rem;
+    font-size: 1rem;
+    color: #b1b1b1;
+    cursor: pointer;
+}
+
+.searchInput {
+    border: 1px solid #ECECF2;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 1.4rem;
+    border-radius: 0.3rem;
+    padding-left: 0.5rem;
+}
+
+.searchInput svg {
+    color: #B1B3C8;
+}
+
+.searchInput input {
+    border: none;
+    padding: 0 0.5rem 0 0;
+
+}
+
+.searchInput input:focus {
+    outline: none;
+}
+
+.searchContainer {
+    position: relative;
+}
+
+.searchInput input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 180px;
+}
+
+
+.searchResults {
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 100;
+    margin-top: 4px;
+}
+
+.resultItem {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.resultItem:hover {
+    background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .createButton {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .profileIcon {
+        padding: 0.8rem;
+    }
+
+    .searchInput {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .headerContainer {
+        justify-content: space-around;
+        gap: 0.5rem;
+        width: 100vw;
+        height: auto;
+    }
+
+    .createButton p {
+        display: none;
+    }
+
+    .searchInput {
+        width: 50%;
+        max-width: none;
+    }
+
+    .profileIcon {
+        padding: 0.5rem;
+    }
+}

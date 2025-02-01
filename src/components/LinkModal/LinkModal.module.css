@@ -1,0 +1,163 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.heading {
+    background-color: #3B3C51;
+    color: #FFFFFF;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal {
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    width: 30vw;
+}
+
+.form {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+}
+
+.formItem textarea {
+    height: 8em;
+    font-family: 'Manrope', sans-serif;
+}
+
+.input {
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #D1D5DB;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+.linkExp {
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4B83FF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(21px);
+}
+
+.footer {
+    background-color: #F3F7FD;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.clear:hover{
+    background-color: #c7d5ea;
+}
+
+.submit {
+    background-color: #1B48DA;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    color: white;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 95vw;
+        padding: 1rem;
+    }
+
+    .heading {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .formItem textarea {
+        height: 6em;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .clear, .submit {
+        width: 100%;
+        padding: 0.8rem;
+        text-align: center;
+    }
+}

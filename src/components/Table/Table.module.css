@@ -1,0 +1,128 @@
+.tableContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-x: auto;
+    position: relative;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    color: #3B3C51;
+}
+
+.table th,
+.table td {
+    padding: 0.8rem;
+}
+
+.table th {
+    background-color: #F3F7FD;
+}
+
+.table td {
+    border: 0.8px solid #f5f5f5;
+    font-size: 0.9rem;
+}
+
+.noData {
+    text-align: center;
+    padding: 1rem;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 1rem;
+    left: 40%;
+}
+
+.pageButton {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pageButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pageButton:hover:not(:disabled) {
+    background-color: #1b48da;
+    color: white;
+}
+
+.originalLink {
+    width: 250px;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.shortLink {
+    width: 200px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.8rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.6rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+
+    .pageButton {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tableContainer {
+        overflow-x: scroll;
+    }
+
+    .table {
+        min-width: 600px;
+        /* ensures that it is scrollable horizontally on small screens */
+    }
+
+    .table th,
+    .table td {
+        padding: 0.5rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .pageButton {
+        font-size: 0.75rem;
+    }
+
+    .pageButton:disabled {
+        opacity: 0.4;
+    }
+}
